@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411165926) do
+ActiveRecord::Schema.define(version: 20160422102903) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "target_id"
@@ -81,8 +81,9 @@ ActiveRecord::Schema.define(version: 20160411165926) do
     t.string   "digest"
     t.string   "image"
     t.integer  "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "words", force: :cascade do |t|
