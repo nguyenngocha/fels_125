@@ -22,9 +22,6 @@
 en:
   hello: "Hello world"
   
-  static_pages_home: "Home Page"
-  link_home: "Find me in app/views/static_pages/home.html.erb"
-  
   static_pages_help: "Help Page"
   link_help: "Find me in app/views/static_pages/help.html.erb"
   
@@ -35,9 +32,21 @@ en:
   
   sample_app: "Sample App"
   home: "Home"
+  welcome: "Welcome to the Framgia E Learning"
+
   help: "Help"
   login: "Log In"
   
   about: "About"
   contact: "Contact"
   news: "News"
+
+  sign_up: "Sign Up"
+  create_user: "Create my account"
+
+  sign_up_now: "Sign up now!"
+  error_messages: "The form contains"
+  announce: "This is the home page for the Framgia E Learning"
+
+  success_signup: "success signup account"
+  error: "error"
