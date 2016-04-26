@@ -1,4 +1,6 @@
 <li id="category-<%= category.id %>">
   <span class="category"><%= category.title %></span>
   <p class="description"><%= category.description %></p>
+  <%= button_to t("lesson_start"), category_lessons_path(category),
+      class: "btn btn-primary" %>
 </li>

@@ -1,0 +1,19 @@
+<% provide title: t "lesson" %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for current_user %>
+        <%= current_user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3>
+      <%= @lesson.category.name %>
+    </h3>
+    <ol class="words">
+      <%= render @words %>
+    </ol>
+  </div>
+</div>
