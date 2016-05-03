@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :categories, only: [:index] do
     resources :lessons, only: [:create, :show]
   end
+  
+  namespace :admin do
+    resources :categories
+  end
 end

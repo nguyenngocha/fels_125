@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password
       t.string :image
-      t.integer :role
+      t.integer :role, default: 0
       t.string :password_digest
       t.string :remember_digest
 
