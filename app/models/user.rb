@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}
+  
+  enum role: [:user, :admin]
 
   def remember 
     self.remember_token = User.new_token
@@ -33,7 +35,7 @@ class User < ActiveRecord::Base
   def forget
     update_attributes remember_digest: nil
   end
-
+  
   class << self
     def new_token
       SecureRandom.urlsafe_base64

@@ -1,0 +1,11 @@
+<%= form_for [:admin, @category] do |f| %>
+  <%= render "shared/error_messages", object: @category %>
+  
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control" %>
+  
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "form-control" %>
+  
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
