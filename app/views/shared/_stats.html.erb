@@ -1,0 +1,7 @@
+<div class="user">
+  <%= gravatar_for user, size: Settings.size %>
+  <strong>
+    <h1><%= user.name %></h1>
+  </strong>
+  <a><div><% t "admin_delete_user" %></div></a>
+</div>
