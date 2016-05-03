@@ -21,6 +21,7 @@
 
 en:
   hello: "Hello world"
+  base_title: "Framgia E Learning"
   
   static_pages_help: "Help Page"
   link_help: "Find me in app/views/static_pages/help.html.erb"
@@ -28,14 +29,12 @@ en:
   static_pages_about: "About Page"
   link_about: "Find me in app/views/static_pages/about.html.erb"
   
-  base_title: "Framgia E Learning"
-  
   sample_app: "Sample App"
   home: "Home"
   welcome: "Welcome to the Framgia E Learning"
 
   help: "Help"
-  login: "Log In"
+  login: "Log in"
   
   about: "About"
   contact: "Contact"
@@ -55,3 +54,11 @@ en:
   
   lesson_start: "Start"
   lesson_create_failed: "Failed to start lesson"
+
+  new_user: "New user? "
+  danger_login: "invalid email/password combination"
+
+  user: "Users"
+  account: "Account"
+  log_out: "Log out"
+  remember_me: "Remember me"
