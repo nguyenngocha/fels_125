@@ -62,3 +62,10 @@ en:
   account: "Account"
   log_out: "Log out"
   remember_me: "Remember me"
+
+  edit_user: "Edit User"
+  edit_title: "Update profile"
+  save_edit: "Save change"
+  success_edit: "Edit successfully"
+  login_please: "Please log in."
+  change: "Change"
