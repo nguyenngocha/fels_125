@@ -56,6 +56,9 @@ en:
   category_updated: "Category updated"
   category_deleted: "Category deleted"
   category_not_deleted: "Category not deleted"
+  category_update: "Update category"
+  category_updated: "Category updated"
+  category_not_updated: "Category not updated"
   
   lesson_start: "Start"
   lesson_create_failed: "Failed to start lesson"
