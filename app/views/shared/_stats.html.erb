@@ -3,5 +3,5 @@
   <strong>
     <h1><%= user.name %></h1>
   </strong>
-  <a><div><% t "admin_delete_user" %></div></a>
+  <%= link_to t("admin_delete_user"), admin_user_path(user), method: :delete, data: { confirm: t("confirm") } %>
 </div>
