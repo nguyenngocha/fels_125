@@ -7,7 +7,7 @@
   <aside class="col-md-8">
     <section class="stats">
       <% @users.each do |user| %>
-        <%= render "shared/stats", user: user unless user.admin? %>
+        <%= render "shared/users", user: user unless user.admin? %>
       <% end %>
     </section>
   </aside>
