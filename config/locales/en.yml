@@ -82,3 +82,4 @@ en:
   confirm: "Are you sure?"
   
   verify_admin: "Attempted action requires Admin privilege"
+  admin_delete_user: "delete"
