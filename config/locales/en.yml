@@ -85,3 +85,10 @@ en:
   admin_delete_user: "Delete"
   confirm: "You sure?"
   admin_success_delete_user: "Delete user successfully"
+  
+  following: "following"
+  followers: "followers"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following-users: "Following users"
+  followed-users: "Followed users"

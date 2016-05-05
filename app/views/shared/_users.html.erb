@@ -1,0 +1,7 @@
+<div class="user">
+  <%= gravatar_for user, size: Settings.size %>
+  <strong>
+    <h1><%= link_to user.name, user %></h1>
+  </strong>
+  <%= link_to t("admin_delete_user"), admin_user_path(user), method: :delete, data: {confirm: t("confirm")} %>
+</div>

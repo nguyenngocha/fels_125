@@ -15,6 +15,7 @@ gem "bootstrap-will_paginate", "0.0.10"
 gem "config"
 
 group :development, :test do
+  gem "faker", "1.4.2"
   gem "byebug"
 end
 
