@@ -59,9 +59,20 @@ en:
   category_update: "Update category"
   category_updated: "Category updated"
   category_not_updated: "Category not updated"
-  
+
   lesson_start: "Start"
   lesson_create_failed: "Failed to start lesson"
+  lesson_updated: "Lesson updated"
+  lesson_update_failed: "Failed to update lesson"
+  finish: "Finish"
+
+  words: "Words"
+  add_word: "Add word"
+  add_answer: "Add answer"
+  word_added: "Added a new word"
+  word_add_failed: "Failed to add a new word"
+  remove: "Remove"
+  at_least_one_correct_answer: "Each word needs at least one correct answer"
 
   new_user: "New user? "
   danger_login: "invalid email/password combination"

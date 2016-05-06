@@ -196,3 +196,27 @@ input {
 .users.follow {
   padding: 0;
 }
+
+.input-radio{
+  input{
+    width: auto;
+  }
+}
+
+#error_explanation {
+  ul {
+    padding-left: 0;
+  }
+  
+  li {
+    list-style: none;
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    color: #A94442;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
