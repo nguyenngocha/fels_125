@@ -11,4 +11,13 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+  
+  def load_object model
+    object = model.find_by params[:id]
+    unless object
+      flash[:danger] = t "object_not_found", object: model, id: params[:id]
+      redirect_to :back
+    end
+    object
+  end
 end

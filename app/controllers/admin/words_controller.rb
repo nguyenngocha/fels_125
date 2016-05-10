@@ -1,6 +1,9 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
+  before_action only: [:destroy] {
+    @word = load_object Word
+  }
   
   def create
     @word = Word.new word_params
@@ -12,6 +15,15 @@ class Admin::WordsController < ApplicationController
       flash[:danger] = t "word_add_failed"
       redirect_to :back
     end
+  end
+
+  def destroy
+    if @word.destroy
+      flash[:success] = t "word_deleted"
+    else
+      flash[:danger] = t "word_delete_failed"
+    end
+    redirect_to :back
   end
 
   private

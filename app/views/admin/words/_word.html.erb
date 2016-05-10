@@ -16,4 +16,9 @@
       </tr>  
     <% end %>
   </table>
+  
+  <div class="panel-footer">
+    <%= link_to t("delete"), [:admin, word], method: :delete,
+      data: {confirm: t("confirm")}, class: "btn btn-danger" %>
+  </div>
 </div>
