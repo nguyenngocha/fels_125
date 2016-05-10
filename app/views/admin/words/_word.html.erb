@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><%= word.question %></div>
+  <table class="table">
+    <tr>
+      <td class="col-md-10"><%= t "choices" %></td>
+      <td class="col-md-2"><%= t "correct" %></td>
+    </tr>
+    <% word.answers.each do |answer| %>
+      <tr>
+        <td><%= answer.answer %></td>
+        <td>
+          <% if answer.is_correct %>
+            <%= t "yes" %>
+          <% end %>
+        </td>
+      </tr>  
+    <% end %>
+  </table>
+</div>

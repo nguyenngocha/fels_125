@@ -12,6 +12,8 @@ class Admin::CategoriesController < ApplicationController
     Settings.word.number_of_answers.times do
       @answer = @word.answers.build
     end
+    @words = @category.words.paginate page: params[:page], 
+      per_page: Settings.word.per_page
   end
   
   def new
