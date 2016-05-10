@@ -7,6 +7,13 @@ class Admin::CategoriesController < ApplicationController
     @categories = Category.paginate page: params[:page]
   end
   
+  def show
+    @word = Word.new
+    Settings.word.number_of_answers.times do
+      @answer = @word.answers.build
+    end
+  end
+  
   def new
     @category = Category.new
   end
