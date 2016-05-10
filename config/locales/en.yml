@@ -71,11 +71,15 @@ en:
   add_answer: "Add answer"
   word_added: "Added a new word"
   word_add_failed: "Failed to add a new word"
+  word_deleted: "Word deleted"
+  word_delete_failed: "Failed to delete word"
   choices: "Choices"
   correct: "Correct"
   yes: "Yes"
   remove: "Remove"
   at_least_one_correct_answer: "Each word needs at least one correct answer"
+  
+  object_not_found: "%{object} with id %{id} not found"
 
   new_user: "New user? "
   danger_login: "invalid email/password combination"
@@ -97,7 +101,6 @@ en:
   
   verify_admin: "Attempted action requires Admin privilege"
   admin_delete_user: "Delete"
-  confirm: "You sure?"
   admin_success_delete_user: "Delete user successfully"
   
   following: "following"

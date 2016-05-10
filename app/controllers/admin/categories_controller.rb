@@ -1,7 +1,9 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
-  before_action :load_category, except: [:index, :new, :create]
+  before_action except: [:index, :new, :create] { 
+    @category = load_object Category
+  }
   
   def index
     @categories = Category.paginate page: params[:page]
@@ -54,9 +56,5 @@ class Admin::CategoriesController < ApplicationController
   private
   def category_params
     params.require(:category).permit :title, :description, :image
-  end
-  
-  def load_category
-    @category = Category.find params[:id]
   end
 end
