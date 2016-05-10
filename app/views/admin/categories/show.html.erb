@@ -1,16 +1,24 @@
 <% provide title: @category.title %>
-<% provide :button_text, t("add_word") %>
-<div class="row">
-  <span class="categories"><%= @category.title %></span>
-  <p class="description"><%= @category.description %></p>
-</div>
-
+<% provide :button_text, t("finish") %>
 <div class="row">
   <div class="col-md-6">
+    <h3><%= t "category" %></h3>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= @category.title %>
+      </div>
+      <div class="panel-body">
+        <div><%= @category.description %></div>
+      </div>
+    </div>
+    <br />
+
+    <h3><%= t "add_word" %></h3>
     <%= render "admin/words/form" %>
   </div>
-  
+
   <div class="col-md-6">
+    <h3><%= t "words" %></h3>
     <%= render @words %>
     <%= will_paginate @words %>
   </div>

@@ -1,7 +1,7 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
-  before_action only: [:destroy] {
+  before_action only: [:edit, :update, :destroy] {
     @word = load_object Word
   }
   
@@ -14,6 +14,26 @@ class Admin::WordsController < ApplicationController
     else
       flash[:danger] = t "word_add_failed"
       redirect_to :back
+    end
+  end
+  
+  def edit
+  end
+  
+  def update
+    if @word.update_attributes word_params
+      flash.now[:success] = t "word_updated"
+      @category = @word.category
+      @word = Word.new
+      Settings.word.number_of_answers.times do
+        @answer = @word.answers.build
+      end
+      @words = @category.words.paginate page: params[:page], 
+        per_page: Settings.word.per_page
+      render "admin/categories/show"
+    else
+      flash.now[:danger] = t "word_update_failed"
+      render :edit
     end
   end
 
