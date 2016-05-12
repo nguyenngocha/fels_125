@@ -6,7 +6,7 @@ class Word < ActiveRecord::Base
   has_many :lessons, through: :user_answers
 
   accepts_nested_attributes_for :answers, allow_destroy: true, reject_if: :reject_answers
-  
+
   validates_presence_of :question
   validate :at_least_one_correct_answer
   
