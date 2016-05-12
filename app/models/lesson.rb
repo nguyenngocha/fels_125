@@ -5,10 +5,10 @@ class Lesson < ActiveRecord::Base
   has_many :user_answers, dependent: :destroy
   has_many :words, through: :user_answers
   
-  def build_user_answers
-    words = category.words.order("RANDOM()").limit 10
+  def build_user_answers 
+    words = self.category.words.order("RANDOM()").limit 10
     words.each do |word|
-      user_answer = user_answer.create word: word
+      UserAnswer.create! word: word, user: self.user, lesson: self, category: self.category
     end
   end
 end
