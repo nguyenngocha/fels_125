@@ -1,0 +1,15 @@
+<fieldset>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <%= f.check_box :is_correct, type: "checkbox" %>
+        </span>
+        <%= f.text_field :answer, type: "text", class: "form-control" %>
+      </div>
+    </div>
+    <%= f.hidden_field :_destroy, value: "0" %>
+    <%= link_to t("remove"), "", class: "label label-danger remove_fields" %>
+  </div>
+  <br />
+</fieldset>

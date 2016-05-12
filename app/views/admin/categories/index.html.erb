@@ -1,9 +1,13 @@
 <%= provide title: t("categories") %>
-<h1><% t "categories" %></h1>
-<%= link_to t("category_new"), new_admin_category_path, {class: "btn 
-  btn-primary"} %>
-<%= will_paginate %>
-<ul class="categories">
-  <%= render @categories %>
-</ul>
-<%= will_paginate %>
+<div class="row">
+  <h1><%= t "categories" %></h1>
+  <div class="btn-group btn-group-justified form-group">
+    <%= link_to t("category_new"), new_admin_category_path, {class: "btn
+      btn-primary"} %>
+  </div>
+  <%= will_paginate %>
+  <ul class="categories">
+    <%= render @categories %>
+  </ul>
+  <%= will_paginate %>
+</div>

@@ -1,13 +1,19 @@
 <%= form_for [:admin, @word] do |f| %>
-  <%= f.hidden_field :category_id, value: @category.id %>
-  <label class="input-radio">
-    <%= f.label t "add_word" %>
-    <%= f.text_field :question %>
+  <div class="form-group">
+    <%= f.hidden_field :category_id, value: @category.id %>
+
+    <%= f.label t "question" %>
+    <%= f.text_field :question, class: "form-control" %>
+
     <%= f.hidden_field :_destroy %>
-  </label>
-  <%= f.fields_for :answers do |answers_for_form| %>
-    <%= render "answer_fields", f: answers_for_form %>
-  <% end %>
-  <%= link_to_add_fields t("add_answer"), f, :answers %>
+
+    <%= f.label t "answers" %>
+    <%= f.fields_for :answers do |answers_for_form| %>
+      <%= render "admin/words/answer_fields", f: answers_for_form %>
+    <% end %>
+
+    <%= link_to_add_fields t("add_answer"), f, :answers %>
+  </div>
+
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
