@@ -4,11 +4,13 @@ class Lesson < ActiveRecord::Base
 
   has_many :user_answers, dependent: :destroy
   has_many :words, through: :user_answers
-  
-  def build_user_answers 
-    words = self.category.words.order("RANDOM()").limit 10
+
+  accepts_nested_attributes_for :user_answers, allow_destroy: true
+
+  def build_user_answers
+    words = category.words.order("RANDOM()").limit Settings.lesson.word_limit
     words.each do |word|
-      UserAnswer.create! word: word, user: self.user, lesson: self, category: self.category
+      user_answers.create! user: user, category: category, word: word
     end
   end
 end
