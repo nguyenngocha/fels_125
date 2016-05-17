@@ -15,7 +15,9 @@
       <ol class="words">
         <%= render @user_answers, f: f %>
       </ol>
-    <%= f.submit t("submit_test"), class: "btn btn-primary" %>
+    <%= f.hidden_field :status, value: "finished" %>
+    <%= f.submit t("submit_test"), class: "btn btn-primary", disabled:
+      (@lesson.unfinished? && @lesson.user == current_user) ? false : true %>
     <% end %>
   </div>
 </div>

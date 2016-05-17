@@ -4,7 +4,7 @@ class Admin::WordsController < ApplicationController
   before_action only: [:edit, :update, :destroy] {
     @word = load_object Word
   }
-  
+
   def create
     @word = Word.new word_params
     @category = Category.find params[:word][:category_id]
@@ -16,21 +16,14 @@ class Admin::WordsController < ApplicationController
       redirect_to :back
     end
   end
-  
+
   def edit
   end
-  
+
   def update
     if @word.update_attributes word_params
       flash.now[:success] = t "word_updated"
-      @category = @word.category
-      @word = Word.new
-      Settings.word.number_of_answers.times do
-        @answer = @word.answers.build
-      end
-      @words = @category.words.paginate page: params[:page], 
-        per_page: Settings.word.per_page
-      render "admin/categories/show"
+      redirect_to [:admin, @word.category]
     else
       flash.now[:danger] = t "word_update_failed"
       render :edit

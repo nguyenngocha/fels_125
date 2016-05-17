@@ -4,7 +4,7 @@ class UserAnswer < ActiveRecord::Base
   belongs_to :word
   belongs_to :answer
   belongs_to :lesson
-  
+
   validates :user_id, presence: true
   validates :category_id, presence: true
   validates :word_id, presence: true
