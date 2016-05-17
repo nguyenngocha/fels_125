@@ -11,9 +11,9 @@
     <h3><%= t("lesson") %><%= @lesson.id%></h3>
   </aside>
   <div class="col-md-8">
-    <%= form_for :lesson do |f| %>
+    <%= form_for [@lesson.category, @lesson] do |f| %>
       <ol class="words">
-        <%= render @words %>
+        <%= render @user_answers, f: f %>
       </ol>
     <%= f.submit t("submit_test"), class: "btn btn-primary" %>
     <% end %>

@@ -1,0 +1,13 @@
+<li>
+  <%= f.fields_for :user_answers, user_answer do |ff| %>
+    <%= ff.label user_answer.word.question %>
+    <% user_answer.word.answers.each do |answer| %>
+      <div class="input-radio">
+        <label>
+          <%= ff.radio_button :answer_id, answer.id %>
+          <%= ff.label answer.answer %>
+        </label>
+      </div>
+    <% end %>
+  <% end %>
+</li>

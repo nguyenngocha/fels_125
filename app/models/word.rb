@@ -9,13 +9,17 @@ class Word < ActiveRecord::Base
 
   validates_presence_of :question
   validate :at_least_one_correct_answer
-  
+
+  scope :words, lambda {
+    find_by_sql("SELECT DISTINCT * FROM words WHERE words.id NOT IN
+      (SELECT DISTINCT words.id FROM words, user_answers WHERE words.id = word_id)")
+  }
+
   private
-  
   def reject_answers (attributed)
     attributed['answer'].blank?
   end
-  
+
   def at_least_one_correct_answer
     valid = false
     answers.each do |answer|
