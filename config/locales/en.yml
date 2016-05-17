@@ -61,10 +61,16 @@ en:
   category_update: "Update category"
   category_updated: "Category updated"
   category_not_updated: "Category not updated"
+  all_categories: "All categories"
+  filter: "Filter"
+  filter_type:
+    all_words: "All Words"
+    learned: "Learned"
+    not_learn: "Not learned"
 
   lesson_start: "Start"
   lesson_create_failed: "Failed to start lesson"
-  lesson_updated: "Lesson updated"
+  lesson_updated: "You have successfully finished your lesson"
   lesson_update_failed: "Failed to update lesson"
   finish: "Finish"
   correct_answer: "Correct!"
