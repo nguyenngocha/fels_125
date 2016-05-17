@@ -207,7 +207,7 @@ input {
   ul {
     padding-left: 0;
   }
-  
+
   li {
     list-style: none;
     background-color: #F2DEDE;
@@ -219,4 +219,12 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
   }
+}
+
+.correct-answer {
+  color: green;
+}
+
+.incorrect-answer {
+  color: red;
 }

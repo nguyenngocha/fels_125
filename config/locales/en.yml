@@ -22,20 +22,20 @@
 en:
   hello: "Hello world"
   base_title: "Framgia E Learning"
-  
+
   static_pages_help: "Help Page"
   link_help: "Find me in app/views/static_pages/help.html.erb"
-  
+
   static_pages_about: "About Page"
   link_about: "Find me in app/views/static_pages/about.html.erb"
-  
+
   sample_app: "Sample App"
   home: "Home"
   welcome: "Welcome to the Framgia E Learning"
 
   help: "Help"
   login: "Log in"
-  
+
   about: "About"
   contact: "Contact"
   news: "News"
@@ -49,7 +49,7 @@ en:
 
   success_signup: "success signup account"
   error: "error"
-  
+
   category: "Category"
   description: "Description"
   categories: "Categories"
@@ -67,6 +67,8 @@ en:
   lesson_updated: "Lesson updated"
   lesson_update_failed: "Failed to update lesson"
   finish: "Finish"
+  correct_answer: "Correct!"
+  incorrect_answer: "Incorrect!"
 
   words: "Words"
   question: "Question"
@@ -86,7 +88,7 @@ en:
   yes: "Yes"
   remove: "Remove"
   at_least_one_correct_answer: "Each word needs at least one correct answer"
-  
+
   object_not_found: "%{object} with id %{id} not found"
 
   new_user: "New user? "
@@ -103,14 +105,14 @@ en:
   success_edit: "Edit successfully"
   login_please: "Please log in."
   change: "Change"
-  
+
   edit: "Edit"
   confirm: "Are you sure?"
-  
+
   verify_admin: "Attempted action requires Admin privilege"
   admin_delete_user: "Delete"
   admin_success_delete_user: "Delete user successfully"
-  
+
   following: "following"
   followers: "followers"
   follow: "Follow"
@@ -119,5 +121,5 @@ en:
   followed-users: "Followed users"
 
   submit_test: "Submit Test"
-  lesson: "Lesson: "  
+  lesson: "Lesson: "
   category: "Category: "

@@ -7,6 +7,8 @@ class Lesson < ActiveRecord::Base
 
   accepts_nested_attributes_for :user_answers, allow_destroy: true
 
+  enum status: {unfinished: 0, finished: 1}
+
   def build_user_answers
     words = category.words.order("RANDOM()").limit Settings.lesson.word_limit
     words.each do |word|
